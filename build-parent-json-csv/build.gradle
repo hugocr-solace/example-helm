@@ -24,7 +24,7 @@ dependencies {
   interlokRuntime ("com.adaptris:interlok-csv-json:$interlokVersion") { changing=true }
 
   // Actual dependencies for the build
-//  interlokRuntime ("com.adaptris:interlok-tibco:$interlokVersion")
+  interlokRuntime ("com.adaptris:interlok-tibco:$interlokVersion")
   interlokRuntime ("com.adaptris:interlok-solace:$interlokVersion")
   interlokRuntime ("com.adaptris:interlok-webspheremq:$interlokVersion")
   interlokRuntime ("com.adaptris:interlok-aws-kms:$interlokVersion")
