@@ -6,6 +6,9 @@ ENV JAVA_TOOL_OPTIONS=$java_tool_opts
 WORKDIR /opt/interlok
 COPY . /root/builder
 
+## temporal
+COPY customentrypoint.sh /
+
 RUN cd /root/builder && \
     chmod +x /root/builder/gradlew && \
     ./gradlew --no-daemon -PinterlokDistDirectory=/opt/interlok -PbuildEnv=dev build && \
@@ -19,5 +22,9 @@ ENV JVM_ARGS="-XX:MaxRAMPercentage=75.0"
 
 EXPOSE 5555 8080
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD [ "bootstrap.properties" ]
+ENTRYPOINT ["/customentrypoint.sh"]
+CMD [ "/opt/interlok/config/bootstrap.properties" ]
+
+# Original Commands
+# ENTRYPOINT ["/docker-entrypoint.sh"]
+# CMD [ "bootstrap.properties" ]

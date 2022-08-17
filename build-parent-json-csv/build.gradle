@@ -31,6 +31,12 @@ dependencies {
   interlokRuntime ("com.adaptris:interlok-aws-sqs:$interlokVersion")
   interlokRuntime ("com.adaptris:interlok-aws-sns:$interlokVersion")
 
+  interlokRuntime ("com.adaptris:interlok-profiler:$interlokVersion")
+  interlokRuntime ("com.adaptris:interlok-rest-metrics-profiler:$interlokVersion")
+  interlokRuntime ("com.adaptris:interlok-rest-metrics-jvm:$interlokVersion")
+  interlokRuntime ("com.adaptris:interlok-rest-provider-datadog:$interlokVersion")
+
+
   // Documentation that is used by the WebUI when configuring
   interlokJavadocs group: "com.adaptris", name: "interlok-tibco", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
   interlokJavadocs group: "com.adaptris", name: "interlok-solace", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
@@ -38,5 +44,10 @@ dependencies {
   interlokJavadocs group: "com.adaptris", name: "interlok-aws-kms", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
   interlokJavadocs group: "com.adaptris", name: "interlok-aws-sqs", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
   interlokJavadocs group: "com.adaptris", name: "interlok-aws-sns", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
+
+  interlokJavadocs group: "com.adaptris", name: "interlok-profiler", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
+  interlokJavadocs group: "com.adaptris", name: "interlok-rest-metrics-profiler", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
+  interlokJavadocs group: "com.adaptris", name: "interlok-rest-metrics-jvm", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
+  interlokJavadocs group: "com.adaptris", name: "interlok-rest-provider-datadog", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
 
 }
