@@ -31,6 +31,9 @@ dependencies {
   interlokRuntime ("com.adaptris:interlok-aws-sqs:$interlokVersion")
   interlokRuntime ("com.adaptris:interlok-aws-sns:$interlokVersion")
 
+  //Jackson for JSON print logs 
+  implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
+
   // Documentation that is used by the WebUI when configuring
   interlokJavadocs group: "com.adaptris", name: "interlok-tibco", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false
   interlokJavadocs group: "com.adaptris", name: "interlok-solace", version: "$interlokVersion", classifier: "javadoc", changing: true, transitive: false

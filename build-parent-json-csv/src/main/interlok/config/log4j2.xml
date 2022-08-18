@@ -2,10 +2,15 @@
 <Configuration status="warn" monitorInterval="60" shutdownHook="disable">
   <Appenders>
 
-    <Console name="Console" target="SYSTEM_OUT">
+    <!-- UNCOMMENT THIS BLOCK AND COMMENT THE ONE BELOW TO STOP PRINTING LOGS AS JSON -->
+    <!-- <Console name="Console" target="SYSTEM_OUT">
       <PatternLayout>
         <Pattern>%-5p [%t] [%c{1.}.%M()] %m%n</Pattern>
       </PatternLayout>
+    </Console> -->
+
+    <Console name="Console" target="SYSTEM_OUT">
+        <JSONLayout compact="true" eventEol="true" properties="true" stacktraceAsString="true" includeTimeMillis="true" />
     </Console>
 
     <JmxLogAppender name="JmxLogAppender">
