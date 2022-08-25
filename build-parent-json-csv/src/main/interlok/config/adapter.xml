@@ -2,8 +2,7 @@
   <unique-id>jetty-json-csv</unique-id>
   <start-up-event-imp>com.adaptris.core.event.StandardAdapterStartUpEvent</start-up-event-imp>
   <heartbeat-event-imp>com.adaptris.core.HeartbeatEvent</heartbeat-event-imp>
-  <shared-components>
-  </shared-components>
+  <shared-components/>
   <event-handler class="default-event-handler">
     <unique-id>DefaultEventHandler</unique-id>
     <connection class="null-connection">
@@ -19,7 +18,6 @@
   <failed-message-retrier class="no-retries">
     <unique-id>jolly-ptolemy</unique-id>
   </failed-message-retrier>
-  <channel-list>
   <channel-list/>
   <message-error-digester class="standard-message-error-digester">
     <unique-id>ErrorDigest</unique-id>
